@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
-import styles from "./Form.module.css";
 import { Divider } from "@nextui-org/divider";
+import "@/styles/form.css";
 
 export const Form = () => {
   // create a Ref to access our form element
@@ -43,54 +43,30 @@ export const Form = () => {
   return (
     // bind formRef to our form element
     <>
-      <Divider orientation="vertical" />
+      <form className="text-center" ref={formRef} onSubmit={sendFormData}>
+        <h2 className="py-4">
+          Contact me today so that you can stop worrying about your house and
+          get some cash in your pocket.
+        </h2>
+        <p className="space-y-4">catbuyshousesnow@gmail.com</p>
+        <p>Tel: 210-392-2084</p>
+        <Divider className="my-4" />
+        <label htmlFor="nameInput">Full name*</label>
+        <input type="text" id="nameInput" name="name" required />
 
-      <h2>
-        Contact me today so that you can stop worrying about your house and get
-        some cash in your pocket.
-      </h2>
-      <p>catbuyshousesnow@gmail.com</p>
-      <p>Tel: 210-392-2084</p>
-      <form className={styles.form} ref={formRef} onSubmit={sendFormData}>
-        <label className={styles.label} htmlFor="nameInput">
-          Full name*
-        </label>
-        <input
-          className={styles.input}
-          type="text"
-          id="nameInput"
-          name="name"
-          required
-        />
+        <label htmlFor="emailInput">Email address*</label>
+        <input type="email" id="emailInput" name="name" required />
 
-        <label className={styles.label} htmlFor="emailInput">
-          Email address*
-        </label>
-        <input
-          className={styles.input}
-          type="email"
-          id="emailInput"
-          name="name"
-          required
-        />
-
-        <label className={styles.label} htmlFor="messageInput">
+        <label className="label" htmlFor="messageInput">
           Tell me a little about your issue!*
         </label>
-        <textarea
-          className={styles.textarea}
-          id="messageInput"
-          name="message"
-          required
-        ></textarea>
+        <textarea id="messageInput" name="message" required></textarea>
 
-        <button className={styles.button} type="submit">
-          Send
-        </button>
+        <button type="submit">Send</button>
       </form>
 
       {success && (
-        <div className="successMessage">
+        <div className="successMessage text-center">
           {"Thank you for reaching out, I will contact you soon!"}
         </div>
       )}
