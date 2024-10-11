@@ -13,7 +13,7 @@ export const siteConfig = {
       href: "/about",
     },
     {
-      label: "Issues",
+      label: "Issues We Can Solve",
       href: "/issues",
     },
     {
@@ -31,7 +31,7 @@ export const siteConfig = {
       href: "/about",
     },
     {
-      label: "Issues",
+      label: "Issues We Can Solve",
       href: "/issues",
     },
     {
