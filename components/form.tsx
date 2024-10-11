@@ -8,12 +8,13 @@ export const Form = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
-  const sendFormData = async (event) => {
+  const sendFormData = async (event: any) => {
     // this will prevent your form to redirect to another page.
     event.preventDefault();
 
     if (!formRef.current) {
       console.log("something wrong with form ref");
+
       return;
     }
 
@@ -43,7 +44,7 @@ export const Form = () => {
   return (
     // bind formRef to our form element
     <>
-      <form className="text-center" ref={formRef} onSubmit={sendFormData}>
+      <form ref={formRef} className="text-center" onSubmit={sendFormData}>
         <h2 className="py-4">
           Contact me today so that you can stop worrying about your house and
           get some cash in your pocket.
@@ -52,15 +53,15 @@ export const Form = () => {
         <p>Tel: 210-392-2084</p>
         <Divider className="my-4" />
         <label htmlFor="nameInput">Full name*</label>
-        <input type="text" id="nameInput" name="name" required />
+        <input required id="nameInput" name="name" type="text" />
 
         <label htmlFor="emailInput">Email address*</label>
-        <input type="email" id="emailInput" name="name" required />
+        <input required id="emailInput" name="name" type="email" />
 
         <label className="label" htmlFor="messageInput">
           Tell me a little about your issue!*
         </label>
-        <textarea id="messageInput" name="message" required></textarea>
+        <textarea required id="messageInput" name="message" />
 
         <button type="submit">Send</button>
       </form>

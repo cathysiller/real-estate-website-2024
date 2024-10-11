@@ -24,9 +24,9 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar
+      isMenuOpen={isMenuOpen}
       maxWidth="xl"
       position="sticky"
-      isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -42,7 +42,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  "data-[active=true]:text-primary data-[active=true]:font-medium",
                 )}
                 color="foreground"
                 href={item.href}
@@ -74,11 +74,11 @@ export const Navbar = () => {
               <Link
                 color="foreground"
                 href={item.href}
+                size="lg"
                 onClick={() => {
                   setIsMenuOpen(!isMenuOpen);
                   console.log(isMenuOpen);
                 }}
-                size="lg"
               >
                 {item.label}
               </Link>
