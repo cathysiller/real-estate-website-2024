@@ -9,9 +9,10 @@ export default function Home() {
       <div className="inline-block max-w-xl text-center justify-center pb-24">
         <span className={title()}>Let's&nbsp;</span>
         <span className={title({ color: "violet" })}>solve&nbsp;</span>
+        <span className={title()}>your</span>
         <br />
         <span className={title()}>
-          your real estate problems and get you some cash 💰
+          real estate problems and get you some cash 💰
         </span>
       </div>
 
