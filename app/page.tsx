@@ -16,7 +16,7 @@ export default function Home() {
         </span>
       </div>
 
-      <div id="contact">
+      <div id="contact" className="w-8/12">
         <Form />
       </div>
     </section>

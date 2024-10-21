@@ -26,8 +26,8 @@ export const Navbar = () => {
     <NextUINavbar
       isMenuOpen={isMenuOpen}
       maxWidth="xl"
-      position="sticky"
       onMenuOpenChange={setIsMenuOpen}
+      position="sticky"
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
@@ -42,7 +42,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium"
                 )}
                 color="foreground"
                 href={item.href}
@@ -55,16 +55,19 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent
-        className="hidden max-md:flex max-md:basis-full"
+        className="max-sm:hidden md:flex md:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
+        <NavbarItem className="max-md:hidden sm:flex gap-2">
           <ThemeSwitch />
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden flex max-w-full text-right justify-end basis-1,">
-        <NavbarMenuToggle />
+      <NavbarContent className="sm:hidden">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden border-none transparent bg-transparent"
+        />
       </NavbarContent>
 
       <NavbarMenu>
@@ -74,11 +77,10 @@ export const Navbar = () => {
               <Link
                 color="foreground"
                 href={item.href}
-                size="lg"
                 onClick={() => {
                   setIsMenuOpen(!isMenuOpen);
-                  console.log(isMenuOpen);
                 }}
+                size="lg"
               >
                 {item.label}
               </Link>
