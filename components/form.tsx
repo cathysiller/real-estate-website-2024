@@ -45,10 +45,6 @@ export const Form = () => {
     // bind formRef to our form element
     <>
       <form ref={formRef} className="text-center" onSubmit={sendFormData}>
-        <h2 className="py-4">
-          Contact me today so that you can stop worrying about your house and
-          get some cash in your pocket.
-        </h2>
         <p className="space-y-4">catbuyshousesnow@gmail.com</p>
         <p>Tel: 210-392-2084</p>
         <Divider className="my-4" />
