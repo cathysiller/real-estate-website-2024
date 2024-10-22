@@ -41,35 +41,35 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
             <footer className="md:w-full md:flex md:items-center md:justify-center py-3 mx-auto">
+              <span className="text-xs">Designed & Developed by&nbsp;</span>
               <Link
-                className="flex items-center justify-center gap-1 text-xs"
+                className="flex items-center justify-center gap-1 text-xs text-pink-500 font-medium"
                 href="https://www.catherine-siller.com/"
                 isExternal
                 title="Catherine Siller portfolio"
               >
-                <span className="text-default-600">
-                  Designed & Developed by
-                </span>
-                <p className="text-primary">Catherine Siller (Me)</p>
+                Catherine Siller (Me)
               </Link>
-              <span className="max-md:hidden md:block text-default-600 text-xs">
+              <span className="max-md:hidden md:block text-xs">
                 &nbsp; | &nbsp;
               </span>
+              <span className="block text-center text-xs">
+                Powered by&nbsp;
+              </span>
               <Link
-                className="flex justify-center gap-1 text-xs"
+                className="flex items-center justify-center gap-1 text-xs text-pink-500 font-medium"
                 href="https://nextui.org/"
                 isExternal
                 title="nextui.org homepage"
               >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">NextUI</p>
+                NextUI
               </Link>
             </footer>
           </div>
