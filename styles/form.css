@@ -27,7 +27,7 @@ form {
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     font-weight: 500;
-    margin-top: 32px;
+    margin: auto auto;
     padding: 10px;
     transition: 150ms;
     width: 100%;

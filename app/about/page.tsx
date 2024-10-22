@@ -25,6 +25,9 @@ export default function AboutPage() {
             {" "}
             let&apos;s see if I can help!&nbsp;
           </span>
+        </p>
+        <p className="pt-8">
+          {" "}
           Disclaimer: not a real estate agent/do not want to list your house for
           sale.
         </p>
