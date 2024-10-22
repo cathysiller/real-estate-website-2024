@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import "@/styles/globals.css";
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -24,12 +25,13 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar
+      className="bg-transparent backdrop-blur-none backdrop-opacity-0"
       isMenuOpen={isMenuOpen}
       maxWidth="xl"
       onMenuOpenChange={setIsMenuOpen}
-      position="sticky"
+      position="static"
     >
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+      <NavbarContent className="basis-1/5 sm:basis-full">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo />
@@ -63,10 +65,15 @@ export const Navbar = () => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden">
+      <NavbarContent
+        className={
+          "sm:hidden grow-0 flex-none block justify-end flex-0" +
+          ` overRideFlexGrow`
+        }
+      >
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden border-none transparent bg-transparent"
+          className="sm:hidden border-none transparent bg-transparent flex-0"
         />
       </NavbarContent>
 

@@ -27,34 +27,34 @@ textarea {
   padding: 12px;
 }
 
-button {
-  background: rgb(18, 27, 43);
-  border-radius: 6px;
-  border: 1px solid #eceff9;
-  box-shadow: unset;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  margin: auto auto;
-  padding: 10px;
-  transition: 150ms;
-  width: 30%;
+form {
+  button {
+    background: transparent;
+    border-radius: 6px;
+    border: 1px solid #eceff9;
+    box-shadow: unset;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin: auto auto;
+    padding: 10px;
+    transition: 150ms;
+    width: 100%;
+  }
 }
 
 .successMessage {
   padding-top: 48px;
 }
 
-@media only screen and (max-width: 1024px) {
-  form {
-    max-width: 75%;
-  }
-}
-
 @media only screen and (min-width: 1025px) {
   form {
     margin: auto auto;
+  }
+
+  button {
+    width: 30%;
   }
 }

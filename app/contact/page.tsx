@@ -3,7 +3,7 @@
 import { Form } from "@/components/form";
 import { title } from "@/components/primitives";
 
-export default function PricingPage() {
+export default function ContactPage() {
   return (
     <div>
       <h1 className={title()}>Contact Me</h1>

@@ -7,16 +7,14 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-xl text-center justify-center pb-24">
-        <span className={title()}>Let&apos;s&nbsp;</span>
-        <span className={title({ color: "violet" })}>solve&nbsp;</span>
-        <span className={title()}>your</span>
+        <span className={title()}>Let&apos;explore the &nbsp;</span>
+        <span className={title({ color: "violet" })}>options&nbsp;</span>
+        <span className={title()}>for your</span>
         <br />
-        <span className={title()}>
-          real estate problems and get you some cash 💰
-        </span>
+        <span className={title()}>real estate needs 💰</span>
       </div>
 
-      <div id="contact" className="w-8/12">
+      <div id="contact" className="w-full md:w-8/12">
         <Form />
       </div>
     </section>
