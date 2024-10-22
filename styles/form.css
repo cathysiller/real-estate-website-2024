@@ -8,13 +8,30 @@ label {
   text-align: left;
 }
 
-input {
-  background-color: #fff;
-  border: 1px solid #eceff9;
-  border-radius: 5px;
-  font-size: 16px;
-  margin: 4px 0 32px;
-  padding: 12px;
+form {
+  input {
+    background-color: #fff;
+    border: 1px solid #eceff9;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 4px 0 32px;
+    padding: 12px;
+  }
+
+  button {
+    background: transparent;
+    border-radius: 6px;
+    border: 1px solid #eceff9;
+    box-shadow: unset;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 32px;
+    padding: 10px;
+    transition: 150ms;
+    width: 100%;
+  }
 }
 
 textarea {
@@ -25,22 +42,6 @@ textarea {
   font-size: 16px;
   margin: 4px 0 32px;
   padding: 12px;
-}
-
-form {
-  button {
-    background: transparent;
-    border-radius: 6px;
-    box-shadow: unset;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    margin: auto auto;
-    padding: 10px;
-    transition: 150ms;
-    width: 100%;
-  }
 }
 
 .successMessage {
