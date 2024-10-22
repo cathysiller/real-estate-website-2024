@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { Divider } from "@nextui-org/divider";
 import "@/styles/form.css";
 import { useTheme } from "next-themes";
-import { lightLayout } from "@nextui-org/theme";
 
 export const Form = () => {
   // create a Ref to access our form element
@@ -10,7 +9,7 @@ export const Form = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
 
   console.log(theme);
 
@@ -66,8 +65,8 @@ export const Form = () => {
         <textarea required id="messageInput" name="message" />
 
         <button
+          className="light:text-black border-current border-solid border-1 dark:text-white border-white border-solid border-1 lg:w-4/12"
           type="submit"
-          className={`${theme === "light" ? "text-black border-black" : "text-white"}`}
         >
           Send
         </button>

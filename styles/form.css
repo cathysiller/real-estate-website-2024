@@ -31,9 +31,7 @@ form {
   button {
     background: transparent;
     border-radius: 6px;
-    border: 1px solid #eceff9;
     box-shadow: unset;
-    color: rgb(255, 255, 255);
     cursor: pointer;
     font-family: "Poppins", sans-serif;
     font-size: 18px;

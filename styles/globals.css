@@ -18,3 +18,13 @@ html.dark {
 .overRideFlexGrow {
   flex-grow: 0 !important;
 }
+
+@layer base {
+  footer > a > p {
+    @apply text-pink-500;
+  }
+}
+
+html footer > a > p {
+  @apply text-pink-500;
+}
