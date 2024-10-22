@@ -23,7 +23,7 @@ export default function AboutPage() {
           homes. If you have an issue,{" "}
           <span className={paragraph({ color: "violet" })}>
             {" "}
-            let's see if I can help!&nbsp;
+            let&apos;s see if I can help!&nbsp;
           </span>
           Disclaimer: not a real estate agent/do not want to list your house for
           sale.
