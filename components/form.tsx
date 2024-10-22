@@ -65,7 +65,7 @@ export const Form = () => {
         <textarea required id="messageInput" name="message" />
 
         <button
-          className="light:text-black border-current border-solid border-1 dark:text-white border-white border-solid border-1 lg:w-4/12"
+          className="light:text-black border-black border-solid border-1 dark:text-white dark:border-white lg:w-4/12"
           type="submit"
         >
           Send
