@@ -27,11 +27,11 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
 
   const {
     Component,
-    slots,
-    isSelected,
     getBaseProps,
     getInputProps,
     getWrapperProps,
+    isSelected,
+    slots,
   } = useSwitch({
     isSelected: theme === "light" || isSSR,
     "aria-label": `Switch to ${theme === "light" || isSSR ? "dark" : "light"} mode`,
@@ -42,9 +42,9 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
     <Component
       {...getBaseProps({
         className: clsx(
-          "px-px transition-opacity hover:opacity-80 cursor-pointer",
+          "px-px hover:opacity-80 cursor-pointer",
           className,
-          classNames?.base,
+          classNames?.base
         ),
       })}
     >
@@ -56,17 +56,17 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
         className={slots.wrapper({
           class: clsx(
             [
-              "w-auto h-auto",
+              "!text-default-500",
               "bg-transparent",
-              "rounded-lg",
               "flex items-center justify-center",
               "group-data-[selected=true]:bg-transparent",
-              "!text-default-500",
+              "mx-0",
               "pt-px",
               "px-0",
-              "mx-0",
+              "rounded-lg",
+              "w-auto h-auto",
             ],
-            classNames?.wrapper,
+            classNames?.wrapper
           ),
         })}
       >

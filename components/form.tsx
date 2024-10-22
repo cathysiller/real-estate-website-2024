@@ -1,12 +1,18 @@
 import React, { useRef, useState } from "react";
 import { Divider } from "@nextui-org/divider";
 import "@/styles/form.css";
+import { useTheme } from "next-themes";
+import { lightLayout } from "@nextui-org/theme";
 
 export const Form = () => {
   // create a Ref to access our form element
   const formRef = useRef(null);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+
+  const { theme, setTheme } = useTheme();
+
+  console.log(theme);
 
   const sendFormData = async (event: any) => {
     // this will prevent your form to redirect to another page.
@@ -59,7 +65,12 @@ export const Form = () => {
         </label>
         <textarea required id="messageInput" name="message" />
 
-        <button type="submit">Send</button>
+        <button
+          type="submit"
+          className={`${theme === "light" ? "text-black border-black" : "text-white"}`}
+        >
+          Send
+        </button>
       </form>
 
       {success && (

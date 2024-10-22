@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background-color-light: rgb(241 245 249);
+  --background-color-dark: #121212;
+}
+
+html.light {
+  background-color: var(--background-color-light);
+}
+
+html.dark {
+  background-color: var(--background-color-dark);
+}
+
+.overRideFlexGrow {
+  flex-grow: 0 !important;
+}
